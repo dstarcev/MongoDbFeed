@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MongoDbFeed.Playground")]
+[assembly: AssemblyTitle("MongoDbFeed.Dependencies")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MongoDbFeed.Playground")]
+[assembly: AssemblyProduct("MongoDbFeed.Dependencies")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5082bf52-9d07-4182-8ec1-1be7540094d3")]
+[assembly: Guid("068d867e-c04c-4639-83a4-fb290bea7563")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{681B5E
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDbFeed.Dependencies", "MongoDbFeed.Dependencies\MongoDbFeed.Dependencies.csproj", "{968F6557-F0FF-4799-AC50-FE02B53A47E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{AF469D0D-2281-4692-88C4-B21A7842C03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF469D0D-2281-4692-88C4-B21A7842C03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF469D0D-2281-4692-88C4-B21A7842C03C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{968F6557-F0FF-4799-AC50-FE02B53A47E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{968F6557-F0FF-4799-AC50-FE02B53A47E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{968F6557-F0FF-4799-AC50-FE02B53A47E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{968F6557-F0FF-4799-AC50-FE02B53A47E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
