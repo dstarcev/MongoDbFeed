@@ -7,6 +7,8 @@ namespace MongoDbFeed.Dependencies {
 		public IWindsorContainer Create() {
 			var container = new WindsorContainer();
 			container.Install(new MongoDbInstaller());
+			container.Install(new MongoDbActivityFeedServiceInstaller());
+			container.Install(new RabbitMqInstaller());
 			return container;
 		}
 	}
