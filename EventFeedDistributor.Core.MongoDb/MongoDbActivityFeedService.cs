@@ -40,7 +40,7 @@ namespace EventFeedDistributor.Core.MongoDb {
 		private Task AddToRelatedFeeds(TEventBase @event) {
 			var relatedFeeds = _relations.FindAs<ActivityFeedRelation<TFeedKey, TSourceKey>>(
 				Query.EQ("SourceId", BsonValue.Create(@event.SourceId))
-			).SetFields("FeedId");
+			).SetFields(ExcludeId.Include("FeedId"));
 
 			if (relatedFeeds.Size() == 0) {
 				return StubTask.Void;
@@ -152,7 +152,7 @@ namespace EventFeedDistributor.Core.MongoDb {
 					Query.EQ("FeedId", BsonValue.Create(feedId))
 				)
 				.SetSortOrder(SortBy.Descending("Relevancy"))
-				.SetFields("EventId");
+				.SetFields(ExcludeId.Include("EventId"));
 
 			if (skip != null) {
 				query = query.SetSkip(skip.Value);
@@ -168,6 +168,12 @@ namespace EventFeedDistributor.Core.MongoDb {
 				.ToList();
 
 			return StubTask.Value((ICollection<TEventBase>)result);
+		}
+
+		private static FieldsBuilder ExcludeId {
+			get {
+				return new FieldsBuilder().Exclude("_id");
+			}
 		}
 
 		private Task RemoveAllSourceEventsFromFeed(TSourceKey sourceId, TFeedKey feedId) {
